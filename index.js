@@ -14,7 +14,7 @@ const
   default_port = 1500;
 
 // Sets server port and logs message on success
-app.listen(process.env.PORT || default_port, () => {console.log('marvin is listening'); console.log('The first ten million years are the worst')});
+app.listen(process.env.PORT || default_port, () => {console.log('marvin is listening at port ' + default_port); console.log('The first ten million years are the worst')});
 
 
 
@@ -24,8 +24,9 @@ app.listen(process.env.PORT || default_port, () => {console.log('marvin is liste
 
 // POST
 app.post('/webhook', (req, res) => {  
+  console.log('Received POST');
+  console.log('\tBody content => ' + req.body);
  
-  console.log(req.body);
   let body = req.body;
 
   // Checks this is an event from a page subscription
@@ -47,11 +48,12 @@ app.post('/webhook', (req, res) => {
     // Returns a '404 Not Found' if event is not from a page subscription
     res.sendStatus(404);
   }
-
 });
 
 // GET
 app.get('/webhook', (req, res) => {
+  console.log('Received GET');
+  console.log('\tQuery content => ' + req.query);
 
   // Your verify token. Should be a random string.
   let VERIFY_TOKEN = "<YOUR_VERIFY_TOKEN>"
