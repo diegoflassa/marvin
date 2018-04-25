@@ -13,9 +13,9 @@ Obtenha a versão mais recente do código no Github utilizando o Git, ou baixe o
     git clone https://github.com/diegoflassa/magratheacp-webhook.git
 
 
-## Setup
+## Pré-Requisitos
 
-TODO
+VOcÊ irá precisar do Node.js instalado em sua máquina. O instalador pode ser encontrado [aqui](https://nodejs.org/en/download/).
 
 
 ## Building
@@ -25,13 +25,19 @@ Este projeto usa [Node.js](https://nodejs.org), que é baseado na linguagem [Jav
 
 ## QuickStart
 
-TODO:
+Execute os comandos abaixo no console, a partir da pasta do projeto:
 
 
-TODO
+Use o comando a seguir para iniciar o servidor:
 
 ```javascript
-TODO
+node index.js
+```
+
+Se bem sucedido, o servidor irá retornar:
+
+```
+marvin is listening
 ```
 
 TODO

@@ -14,7 +14,8 @@ const
   default_port = 1500;
 
 // Sets server port and logs message on success
-app.listen(process.env.PORT || default_port, () => console.log('webhook is listening'));
+app.listen(process.env.PORT || default_port, () => {console.log('marvin is listening'); console.log('The first ten million years are the worst')});
+
 
 
 //////////////
