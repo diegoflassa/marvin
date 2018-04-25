@@ -1,0 +1,23 @@
+{
+  "name": "magratheacp-webhook",
+  "version": "0.0.1",
+  "description": "Magrathea Construções Planetárias - Messenger Webhook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegoflassa/magratheacp-webhook.git"
+  },
+  "author": "Diego Felipe Lassa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegoflassa/magratheacp-webhook/issues"
+  },
+  "homepage": "https://github.com/diegoflassa/magratheacp-webhook#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3"
+  }
+}
