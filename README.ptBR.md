@@ -1,21 +1,21 @@
 [Read in English-American](README.md)
-# Magrathea Construções Planetárias - Messenger Webhook
+# Marvin - Messenger Webhook
 
-MagratheaCP-Webhook um aplicativo em [Node.js](https://nodejs.org) que tem por objetivo interceptar as mensagems do [Messenger](www.messenger.com) da página de Facebook [Magrathea Construções Planetárias](www.facebook.com/Magrathea-Constru%C3%A7%C3%B5es-Planet%C3%A1rias-215986975835699) e processar as mensagens através de [Processamento de Linguagem Natural (PLN)](pt.wikipedia.org/wiki/Processamento_de_linguagem_natural)
+Marvin é um aplicativo em [Node.js](https://nodejs.org) que tem por objetivo interceptar as mensagems do [Messenger](www.messenger.com) da página de Facebook [Magrathea Construções Planetárias](www.facebook.com/Magrathea-Constru%C3%A7%C3%B5es-Planet%C3%A1rias-215986975835699) e processar as mensagens através de [Processamento de Linguagem Natural (PLN)](pt.wikipedia.org/wiki/Processamento_de_linguagem_natural)
 
 
 ## Obtendo o código
 
 Obtenha a versão mais recente do código no Github utilizando o Git, ou baixe o repositório em um arquivo ZIP.
-([Download](https://github.com/diegoflassa/magratheacp-webhook/archive/master.zip))
+([Download](https://github.com/diegoflassa/marvin/archive/master.zip))
 
 
-    git clone https://github.com/diegoflassa/magratheacp-webhook.git
+    git clone https://github.com/diegoflassa/marvin.git
 
 
 ## Pré-Requisitos
 
-VOcÊ irá precisar do Node.js instalado em sua máquina. O instalador pode ser encontrado [aqui](https://nodejs.org/en/download/).
+Você irá precisar do Node.js instalado em sua máquina. O instalador pode ser encontrado [aqui](https://nodejs.org/en/download/).
 
 
 ## Building
