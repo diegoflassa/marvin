@@ -12,18 +12,20 @@
     "url": "git+https://github.com/diegoflassa/marvin.git"
   },
   "author": "Diego Felipe Lassa",
-  "license": "Apache License 2.0",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/diegoflassa/marvin/issues"
   },
   "homepage": "https://github.com/diegoflassa/marvin#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.16.3",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
+    "express": "^4.16.3",
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0",
-    "pug": "2.0.0-beta11"
+    "natural": "^0.5.6",
+    "pug": "2.0.0-beta11",
+    "request": "^2.85.0"
   }
 }
