@@ -194,6 +194,7 @@ function callSendAPI(sender_psid, response) {
 
 //Entities handling
 function handleEntities(entities) {
+  console.log('handleEntities => ' + entities);
   if(entities){
     entities.forEach(function(entity) {
       console.log('['+entity.name+']');
