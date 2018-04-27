@@ -37,21 +37,24 @@ router.post('/', (req, res, next) => {
       console.log(webhook_event);
     });
 
-    // Returns a '200 OK' response to all requests
-    res.status(200).send('EVENT_RECEIVED');
   } else {
     // Returns a '404 Not Found' if event is not from a page subscription
-    res.sendStatus(404);
+    console.log('body.object not page => ' + body.object);
   }
+
+  // Returns a '200 OK' response to all requests
+  res.status(200).send('EVENT_RECEIVED');
 });
 
 // GET
 router.get('/', (req, res, next) => {
   console.log('Received GET');
+  console.log('\tQuery Url  => ' + req.url);
   console.log('\tQuery content => ' + req.query);
 
   // Your verify token. Should be a random string.
-  let VERIFY_TOKEN = "<YOUR_VERIFY_TOKEN>"
+  // TODO: Load from config
+  let VERIFY_TOKEN = "dfl-magrathea-wh-vt"
     
   // Parse the query params
   let mode = req.query['hub.mode'];
