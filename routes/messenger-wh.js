@@ -1,29 +1,24 @@
 'use strict';
 
 
-//////////
-//Config//
-//////////
+//Dependencies
+//////////////
 
-// Imports dependencies and set up http server
 const
-  express = require('express'),
-  bodyParser = require('body-parser'),
-  app = express().use(bodyParser.json()), // creates express http server
-  //Horsehead Nebula is about 1500 light years from earth ;-)
-  default_port = 1500;
-
-// Sets server port and logs message on success
-app.listen(process.env.PORT || default_port, () => {console.log('marvin is listening at port ' + default_port); console.log('The first ten million years are the worst')});
+  express = require('express');
 
 
+//Config
+////////
 
-//////////////
-//End-Points//
-//////////////
+var router = express.Router();
+
+
+//End-Points
+////////////
 
 // POST
-app.post('/webhook', (req, res) => {  
+router.post('/', (req, res, next) => {  
   console.log('Received POST');
   console.log('\tBody content => ' + req.body);
  
@@ -51,7 +46,7 @@ app.post('/webhook', (req, res) => {
 });
 
 // GET
-app.get('/webhook', (req, res) => {
+router.get('/', (req, res, next) => {
   console.log('Received GET');
   console.log('\tQuery content => ' + req.query);
 
@@ -82,3 +77,6 @@ app.get('/webhook', (req, res) => {
     res.sendStatus(422);   
   }
 });
+
+
+module.exports = router;

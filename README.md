@@ -31,7 +31,7 @@ Execute the commands below in the console, at the project's folder:
 Use the folowing command to star the server:
 
 ```javascript
-node index.js
+set DEBUG=marvin:* & npm start
 ```
 
 If sucessfull, the server will return:

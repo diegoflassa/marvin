@@ -1,0 +1,88 @@
+#!/usr/bin/env node
+'use strict';
+
+
+//Dependencies
+//////////////
+
+var app = require('../marvin');
+var http = require('http');
+var debug = require('debug')('marvin:server');
+
+
+//Config
+////////
+
+const
+  //Horsehead Nebula is about 1500 light years from earth ;-)
+  default_port = 1500;
+
+var port = normalizePort(process.env.PORT || default_port);
+app.set('port', port);
+
+var server = http.createServer(app);
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);
+
+console.log('Will use port ' + app.get('port'));
+
+
+//Functions
+///////////
+
+//Sanitize port
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+
+//Listeners
+///////////
+
+function onError(error) {
+  console.log('Marvin is confused. Handling error ' + error);
+
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+
+  var bind = typeof port === 'string'
+    ? 'Pipe ' + port
+    : 'Port ' + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+  debug('Marvin is listening on ' + bind);
+  console.log('Marvin is listening on ' + bind);
+}

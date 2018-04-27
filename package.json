@@ -2,8 +2,9 @@
   "name": "marvin",
   "version": "0.0.1",
   "description": "Marvin - Messenger Webhook",
-  "main": "index.js",
+  "main": "marvin.js",
   "scripts": {
+    "start": "node ./bin/start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,13 +12,18 @@
     "url": "git+https://github.com/diegoflassa/marvin.git"
   },
   "author": "Diego Felipe Lassa",
-  "license": "ISC",
+  "license": "Apache License 2.0",
   "bugs": {
     "url": "https://github.com/diegoflassa/marvin/issues"
   },
   "homepage": "https://github.com/diegoflassa/marvin#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11"
   }
 }
